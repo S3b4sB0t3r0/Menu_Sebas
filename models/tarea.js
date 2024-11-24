@@ -1,20 +1,13 @@
-const { v4: uuidv4 } = require('uuid');
 
+let idCounter = 0; 
 
 class Tarea {
-
-    id = '';
-    descripcion = '';
-    Estado = null;
-
     constructor(descripcion) {
-
-        this.id = uuidv4();
+        idCounter++; 
+        this.id = idCounter; 
         this.descripcion = descripcion;
-        this.Estado = null;
+        this.Estado = null; 
     }
 }
 
 module.exports = Tarea;
-
-
